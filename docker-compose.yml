@@ -1,0 +1,37 @@
+version: '3.8'
+
+
+services:
+  deno:
+    container_name: deno
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: './deno/Dockerfile'
+    working_dir: /app
+    ports:
+    - '8095:8095'
+    volumes:
+      - ./deno:/app
+    depends_on:
+      - mongo
+  
+  mongo:
+    container_name: mongo
+    build:
+      context: .
+      dockerfile: './mongo/Dockerfile' 
+    ports:
+      - '27017:27017'
+    # entrypoint: ["mongo", "--port", "27085"]
+
+
+
+
+
+
+
+
+
+

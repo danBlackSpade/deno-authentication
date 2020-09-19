@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": {
+      "cmd": "deno run -A --unstable server.ts"
+    }
+  },
+  "watcher": {
+    "interval": 350,
+    "exts": ["js", "jsx", "ts", "tsx", "json", "dejs", "html", "css"],
+    "match": ["*.*"],
+    "skip": ["*/.git/*"],
+    "legacy": true
+  }
+}

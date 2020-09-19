@@ -1,0 +1,30 @@
+<%- await include(Deno.cwd() + '/applets/user/views/header.ejs') %> 
+
+<div class="container" style="max-width: 30rem">
+  <h1>Criar Conta</h1>
+  <% if(typeof msgs == 'object') { %>
+    <div class="alert alert-danger">
+      <%= msg.error %> 
+    </div>
+  <% } %>
+
+  <form action="/register" method="post">
+    <div class="form-group">
+      <!-- <label for="Email">Email</label> -->
+      <input type="text" name="email" class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <!-- <label for="senha">Senha</label> -->
+      <input type="password" name="senha" class="form-control" placeholder="Senha">
+    </div>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-primary" type="submit">Register</button>
+      <div>
+        <a href="/login">Clique aqui para Login</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<%- await include(Deno.cwd() + '/applets/user/views/footer.ejs') %> 
