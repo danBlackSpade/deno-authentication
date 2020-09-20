@@ -2,25 +2,31 @@
 
 <div class="container" style="max-width: 30rem">
   <h1>Criar Conta</h1>
-  <% if(typeof msgs == 'object') { %>
-    <div class="alert alert-danger">
-      <%= msg.error %> 
-    </div>
+  <% if(typeof msg == 'object') { %>
+    <% if (msg.error) { %> 
+      <div class="alert alert-danger">
+        <%= msg.error %> 
+      </div>
+    <% } else if (msg.success) { %> 
+      <div class="alert alert-success">
+        <%= msg.success %> 
+      </div>
+    <% } %> 
   <% } %>
 
-  <form action="/register" method="post">
+  <form action="/user/register" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <!-- <label for="Email">Email</label> -->
       <input type="text" name="email" class="form-control" placeholder="Email">
     </div>
     <div class="form-group">
       <!-- <label for="senha">Senha</label> -->
-      <input type="password" name="senha" class="form-control" placeholder="Senha">
+      <input type="password" name="password" class="form-control" placeholder="Senha">
     </div>
     <div class="d-flex justify-content-between">
       <button class="btn btn-primary" type="submit">Register</button>
       <div>
-        <a href="/login">Clique aqui para Login</a>
+        <a href="/user/login">Clique aqui para Login</a>
       </div>
     </div>
   </form>

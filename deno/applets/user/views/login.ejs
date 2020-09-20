@@ -1,0 +1,28 @@
+<%- await include(Deno.cwd() + '/applets/user/views/header.ejs') %> 
+
+<div class="container" style="max-width: 30rem;">
+  <h1>Login Page</h1>
+  <% if (typeof(msg) == 'object') { %>
+    <% if (msg.error) { %>
+      <div class="alert alert-danger">
+        <%= msg.error %> 
+      </div>
+    <% } %> 
+  <% } %> 
+  <form action="/user/login" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" id="password" placeholder="Senha" class="form-control">
+    </div>
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary">Login</button>
+      <div>
+        <a href="/user/register">Clique aqui para Registrar</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<%- await include(Deno.cwd() + '/applets/user/views/footer.ejs') %> 

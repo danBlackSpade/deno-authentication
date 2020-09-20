@@ -1,0 +1,15 @@
+<%- await include(Deno.cwd() + '/applets/user/views/header.ejs') %> 
+
+<div class="content">
+  my HomePage 
+  <br>
+  secret page here
+  <% if (typeof(users) == 'object') { %> 
+    <% for (let i=0; i < users.length; i++) { %>
+      <%= users[i].email %>
+      <%= users[i].password %>
+    <% } %>
+  <% } %> 
+</div>
+
+<%- await include(Deno.cwd() + '/applets/user/views/footer.ejs') %> 
