@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": {
-      "cmd": "deno run -A --unstable server.ts"
+      "cmd": "deno run -A --unstable --importmap=import_map.json server.ts"
     }
   },
   "watcher": {
