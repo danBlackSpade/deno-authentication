@@ -1,10 +1,10 @@
-import type { RouterContext } from "https://deno.land/x/oak@v6.2.0/mod.ts"
+import type { RouterContext } from "oak"
 // import * as dejs from 'https://deno.land/x/dejs@0.8.0/mod.ts'
 import * as dejs from 'dejs'
-import * as path from "https://deno.land/std/path/mod.ts"
-import * as bcrypt from "https://deno.land/x/bcrypt@v0.2.4/mod.ts"
-import { validateJwt } from "https://deno.land/x/djwt/validate.ts"
-import { makeJwt, setExpiration, Jose, Payload } from "https://deno.land/x/djwt/create.ts"
+import * as path from "path"
+import * as bcrypt from "bcrypt"
+// import { validateJwt } from "https://deno.land/x/djwt/validate.ts"
+import { makeJwt, setExpiration, Jose, Payload } from "djwt/create"
 
 import User from "./model.ts"
 

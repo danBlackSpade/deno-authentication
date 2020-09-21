@@ -1,5 +1,5 @@
-import { Application } from "https://deno.land/x/oak@v6.2.0/mod.ts";
-import "https://deno.land/x/dotenv/load.ts";
+import { Application } from "oak";
+import "dotenv/load";
 
 import db from "./config/denodb.ts";
 

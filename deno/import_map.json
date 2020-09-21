@@ -1,5 +1,13 @@
 {
   "imports": {
-    "dejs": "https://deno.land/x/dejs@0.8.0/mod.ts"
+    "bcrypt": "https://deno.land/x/bcrypt@v0.2.4/mod.ts",
+    "dejs": "https://https://deno.land/x/dejs@0.8.0/mod.ts",
+    "denodb": "https://deno.land/x/denodb@v1.0.9/mod.ts",
+    "djwt/create": "https://deno.land/x/djwt@v1.5/create.ts",
+    "djwt/validate": "https://deno.land/x/djwt@v1.5/validate.ts",
+    "dotenv": "https://deno.land/x/dotenv@v0.5.0/mod.ts",
+    "dotenv/load": "https://deno.land/x/dotenv@v0.5.0/load.ts",
+    "oak": "https://deno.land/x/oak@v6.2.0/mod.ts",
+    "path": "https://deno.land/std/path/mod.ts"
   }
 }

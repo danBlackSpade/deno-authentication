@@ -1,4 +1,4 @@
-import { DataTypes, Model } from "https://deno.land/x/denodb@v1.0.9/mod.ts";
+import { DataTypes, Model } from "denodb";
 
 
 class User extends Model {
